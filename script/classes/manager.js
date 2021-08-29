@@ -1,5 +1,5 @@
 const employee = require('./employee');
-const writeHTML = require('./writeHTML.js')
+const writeHTML = require('./script/writeHTML.js')
 
 class manager extends employee {
     constructor(name, id, email, officeNumber) {
