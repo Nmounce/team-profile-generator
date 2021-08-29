@@ -2,18 +2,20 @@ const employee = require('./employee');
 const writeHTML = require('./writeHTML.js')
 
 class manager extends employee {
-    constructor(id, officeNumber) {
-        super(name, id, email, 'Manager');
+    constructor(name, id, email, officeNumber) {
+        super(name, id, email);
         this.officeNumber = officeNumber;
     }
 
-}
-manager.printInfo();
+    getRole() {
+        return "Manager"
+    }
+    getOfficeNumber() {
+        return this.officeNumber;
+    }
+    getHTML() {
+        return writeHTML.manager(this);
+    }
+};
 
-
-*`officeNumber`
-
-*
-`getRole()` & mdash;
-overridden to
-return `'Manager'`
+module.exports = manager;
