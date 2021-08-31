@@ -17,23 +17,7 @@ const header = function () {
                 <div class="row">`
 };
 
-const employeeCard = function (data) {
-    return `
-    <div class="card m-2">
-        <div class="card-body">
-            <h2 class = "emp-name">${data.name}</h2>
-            <h3 class = "emp-type">Employee</h3>
-            <div class="list-group">
-                <p class="list-group-item list-group-item-dark">ID:
-                <span>${data.id}</span></p>
-                <p class="list-group-item list-group-item-dark">E-Mail:
-                <span>${data.email}</span></p>
-            </div>
-        </div>
-    </div>`
-};
-
-const managerCard = function (data) {
+const manager = function (data) {
     return `
     <div class="card m-2">
         <div class="card-header">
@@ -52,7 +36,7 @@ const managerCard = function (data) {
     </div>`
 };
 
-const engineerCard = function (data) {
+const engineer = function (data) {
     return `
     <div class="card m-2">
         <div class="card-header">
@@ -72,7 +56,7 @@ const engineerCard = function (data) {
     </div>`
 };
 
-const internCard = function (data) {
+const intern = function (data) {
     return `
     <div class="card m-2">
         <div class="card-header">
