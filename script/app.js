@@ -1,10 +1,13 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Employee = require("./classes/employee");
-const Manager = require("./classes/manager");
-const Engineer = require("./classes/engineer");
-const Intern = require("./classes/intern");
-const open = require("open");
+const path = require('path');
+const emoji = require('emoji-regex')
+const Employee = require('../lib/employee');
+const Manager = require('../lib/manager');
+const Engineer = require('../lib/engineer');
+const Intern = require('../lib/intern');
+
+
 
 const team = [writeHTML.header(), writeHTML.footer()];
 
@@ -32,13 +35,8 @@ function buildProfile() {
         name: 'role',
         message: 'What type of team member would you like to add?',
         type: 'list',
-        choices: ['Employee', 'Manager', 'Engineer', 'Intern', 'None'],
+        choices: ['Manager', 'Engineer', 'Intern'],
     }]).then((answer) => {
-        if (answer.role === 'Employee') {
-            let employee = new Employee(answers.firstName, answers.id, answers.email);
-            team.splice(team.length - 1, 0, employee.getHTML());
-            buildProfile();
-        }
         if (answer.role === 'Engineer') {
             return inquirer.prompt([{
                 name: 'github',

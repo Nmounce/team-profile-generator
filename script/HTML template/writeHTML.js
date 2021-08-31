@@ -20,11 +20,9 @@ const header = function () {
 const employeeCard = function (data) {
     return `
     <div class="card m-2">
-        <div class="card-header">
-            <h1>${data.name}</h1>
-            <h2>Employee</h2>
-        </div>
         <div class="card-body">
+            <h2 class = "emp-name">${data.name}</h2>
+            <h3 class = "emp-type">Employee</h3>
             <div class="list-group">
                 <p class="list-group-item list-group-item-dark">ID:
                 <span>${data.id}</span></p>
