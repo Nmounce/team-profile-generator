@@ -17,8 +17,5 @@ class Employee {
     getRole() {
         return "Employee";
     }
-    getHTML() {
-        return writeHTML.employee(this);
-    }
 }
 module.exports = Employee;

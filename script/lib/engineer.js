@@ -1,5 +1,4 @@
 const Employee = require('../lib/employee');
-const writeHTML = require('./script/writeHTML.js')
 
 class Engineer extends Employee {
     constructor(name, id, email, github) {
@@ -12,9 +11,6 @@ class Engineer extends Employee {
     }
     getGithub() {
         return this.github;
-    }
-    getHTML() {
-        return writeHTML.Engineer(this);
     }
 }
 

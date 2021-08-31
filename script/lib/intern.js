@@ -1,5 +1,4 @@
 const Employee = require('../lib/employee');
-const writeHTML = require('./script/writeHTML.js');
 
 class Intern extends Employee {
     constructor(name, id, email, school) {
@@ -12,9 +11,6 @@ class Intern extends Employee {
     }
     getSchool() {
         return this.school;
-    }
-    getHTML() {
-        return writeHTML.Intern(this);
     }
 }
 

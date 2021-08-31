@@ -6,7 +6,7 @@ const Logger = require('../script/lib/color-logger')
 const fs = require('fs');
 const OUTPUT_DIR = path.resolve(__dirname, 'output');
 const outputPath = path.join(OUTPUT_DIR, 'team.html');
-const render = require('../script/HTML template/writeHTML');
+const render = require('../script/lib/htmlRenderer');
 const writeHTML = require('../script/HTML template/writeHTML');
 
 const log = new Logger();
