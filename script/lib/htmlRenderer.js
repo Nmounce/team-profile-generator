@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-const templatesDir = path.resolve(__dirname, '../lib/resources/HTMLTemplates');
 
 const render = (emp) => {
     const html = [];
@@ -13,7 +12,7 @@ const render = (emp) => {
 };
 
 const renderMgr = (manager) => {
-    let template = fs.readFileSync(path.resolve(templatesDir, 'resources/HTMLTemplates/manager.html'), 'utf-8');
+    let template = fs.readFileSync(path.resolve('resources/HTMLTemplates/manager.html'), 'utf-8');
     template = replacePlaceHolders(template, 'name', manager.getName());
     template = replacePlaceHolders(template, 'role', manager.getRole());
     template = replacePlaceHolders(template, 'email', manager.getEmail());
@@ -22,7 +21,7 @@ const renderMgr = (manager) => {
     return template;
 };
 const renderEng = (engineer) => {
-    let template = fs.readFileSync(path.resolve(templatesDir, 'resources/HTMLTemplates/engineer.html'), 'utf-8');
+    let template = fs.readFileSync(path.resolve('resources/HTMLTemplates/engineer.html'), 'utf-8');
     template = replacePlaceHolders(template, 'name', engineer.getName());
     template = replacePlaceHolders(template, 'role', engineer.getRole());
     template = replacePlaceHolders(template, 'email', engineer.getEmail());
@@ -31,7 +30,7 @@ const renderEng = (engineer) => {
     return template;
 };
 const renderInt = (intern) => {
-    let template = fs.readFileSync(path.resolve(templatesDir, 'resources/HTMLTemplates/intern.html'), 'utf-8');
+    let template = fs.readFileSync(path.resolve('resources/HTMLTemplates/intern.html'), 'utf-8');
     template = replacePlaceHolders(template, 'name', intern.getName());
     template = replacePlaceHolders(template, 'role', intern.getRole());
     template = replacePlaceHolders(template, 'email', intern.getEmail());
@@ -41,7 +40,7 @@ const renderInt = (intern) => {
 };
 
 const renderMain = (html) => {
-    const template = fs.readFileSync(path.resolve(templatesDir, 'resources/HTMLTemplates/main.html'), 'utf-8');
+    const template = fs.readFileSync(path.resolve('resources/HTMLTemplates/main.html'), 'utf-8');
     return replacePlaceHolders(template, 'team', html);
 };
 

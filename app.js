@@ -25,7 +25,7 @@ const introQ = {
 const managerQ = [{
         name: 'managerName',
         type: 'input',
-        message: 'We will begin with the Manager. What is the Managers first name?',
+        message: 'What is the Managers first name?',
     },
     {
         name: 'managerId',
