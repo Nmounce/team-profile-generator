@@ -1,0 +1,14 @@
+.jumbotron {
+    background-color: coral;
+    text-align: center;
+    font-family: fantasy;
+    font-size: xx-large;
+}
+
+.card-header {
+    text-align: center;
+}
+
+h2 {
+    font-weight: 900;
+}

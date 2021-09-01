@@ -1,13 +1,13 @@
-const Manager = require('../script/lib/manager');
-const Engineer = require('../script/lib/engineer');
-const Intern = require('../script/lib/intern');
+const Manager = require('./script/lib/manager');
+const Engineer = require('./script/lib/engineer');
+const Intern = require('./script/lib/intern');
 const inquirer = require('inquirer');
-const Logger = require('../script/lib/color-logger')
+const Logger = require('./script/lib/color-logger')
 const path = require('path');
 const fs = require('fs');
 const OUTPUT_DIR = path.resolve(__dirname, './output');
 const outputPath = path.join(OUTPUT_DIR, 'team.html');
-const render = require('../script/lib/htmlRenderer');
+const render = require('./script/lib/htmlRenderer');
 const log = new Logger();
 
 //Blank array to be filled with pushed constructors classes
@@ -154,7 +154,7 @@ function addTMLoop() {
         } else if (TMRole.role === 'Intern') {
             log.blue('Enter the Interns Information');
             inquirer.prompt(internQ).then((buildIntern) => {
-                let intern = new Engineer(buildIntern.internName, buildIntern.internId, buildIntern.internEmail, buildIntern.internSchool)
+                let intern = new Intern(buildIntern.internName, buildIntern.internId, buildIntern.internEmail, buildIntern.internSchool)
                 teamMemberArray.push(intern);
                 addAnother();
             });
