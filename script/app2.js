@@ -3,12 +3,11 @@ const Engineer = require('../script/lib/engineer');
 const Intern = require('../script/lib/intern');
 const inquirer = require('inquirer');
 const Logger = require('../script/lib/color-logger')
+const path = require('path');
 const fs = require('fs');
-const OUTPUT_DIR = path.resolve(__dirname, 'output');
+const OUTPUT_DIR = path.resolve(__dirname, './output');
 const outputPath = path.join(OUTPUT_DIR, 'team.html');
 const render = require('../script/lib/htmlRenderer');
-const writeHTML = require('../script/HTML template/writeHTML');
-
 const log = new Logger();
 
 //Blank array to be filled with pushed constructors classes
@@ -132,12 +131,12 @@ function managerInfo() {
 function addAnother() {
     inquirer.prompt(addAnotherTM).then((addTo) => {
         //yes adds another tm to array and recalls addTMLoop func.
-        if (addTo.add === 'Yes') {
+        if (addTo.add === true) {
             addTMLoop();
         }
-        if (addTo.add === 'No') {
+        if (addTo.add === false) {
             //no renders file and closes app
-            writeHTML(teamMemberArray);
+            renderHTML(teamMemberArray);
         }
     });
 }
@@ -164,11 +163,13 @@ function addTMLoop() {
 }
 
 //func to write array info to HTML when all tm's have been enetered
-async function writeHTML(file) {
+function renderHTML(file) {
+    console.log('hello');
     const htmlDoc = render(file);
-    await writeFileAsync(outputPath, htmlDoc).then(function () {
-        log.green(`Team Profile Completed`);
-    });
+    fs.writeFile(outputPath, htmlDoc,
+        function () {
+            log.green(`Team Profile Completed`);
+        });
 }
 
 //call start application
