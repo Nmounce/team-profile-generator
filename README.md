@@ -5,7 +5,7 @@
 ![](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)
 ## Description
 Team Profile Generator is a command-line application using Node.js that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
-![](resources\Capture.PNG)
+![code image](resources/Capture.PNG)
 
 ## Table of Contents
 [Technologies](#technologies)
@@ -34,7 +34,7 @@ you are ready to use the application!
 ## Usage
 After installing the project, run the command node app.js in the command line
 and enter the employee information following the prompts.
-![](https://drive.google.com/file/d/1sYSTIYAneMkTDq-9SoZ_KMhsaaKeDkc3/view)
+![walkthrough](resources/walkthrough.mp4)
 
 ## Licensing
 [Creative Commons] CC0 1.0 Universal CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES.DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY - CLIENT RELATIONSHIP.CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN 'AS-IS' BASIS.CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED HEREUNDER.
@@ -53,7 +53,7 @@ To contribute to README Generator, follow these steps:
                 Alternatively, see the Github documentation on creating a pull request.
 
 ## Tests
-![](resources\test.PNG)
+![testpassimage](resources\test.PNG)
 
 ## Acknowledgements
 Sources:
